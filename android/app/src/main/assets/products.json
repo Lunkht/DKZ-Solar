@@ -1,0 +1,110 @@
+[
+  {
+    "id": "panneau-550w",
+    "name": "Panneau Solaire 550W",
+    "type": "Panneau",
+    "category": "Panneaux solaires",
+    "price": "3 250 000 GNF",
+    "priceEur": "≈ 375 EUR",
+    "tagline": "Le meilleur rendement du marché.",
+    "description": "Panneau monocristallin haute efficacité (PERC) de 550W, idéal pour les toits de Conakry comme pour les sites ruraux. Garanti 25 ans.",
+    "specs": [
+      { "label": "Puissance maximale", "value": "550 Wc" },
+      { "label": "Efficacité", "value": "21,4 %" },
+      { "label": "Tension (Vmp)", "value": "42,0 V" },
+      { "label": "Courant (Imp)", "value": "13,1 A" },
+      { "label": "Dimensions", "value": "2279 × 1134 × 35 mm" },
+      { "label": "Garantie produit", "value": "25 ans" }
+    ]
+  },
+  {
+    "id": "panneau-450w",
+    "name": "Panneau Solaire 450W",
+    "type": "Panneau",
+    "category": "Panneaux solaires",
+    "price": "2 750 000 GNF",
+    "priceEur": "≈ 320 EUR",
+    "tagline": "Polyvalent, compact et fiable.",
+    "description": "Panneau monocristallin 450W au format réduit, parfait pour les installations résidentielles et les pompes solaires. Forte tolérance à la chaleur.",
+    "specs": [
+      { "label": "Puissance maximale", "value": "450 Wc" },
+      { "label": "Efficacité", "value": "20,8 %" },
+      { "label": "Tension (Vmp)", "value": "41,2 V" },
+      { "label": "Courant (Imp)", "value": "10,9 A" },
+      { "label": "Dimensions", "value": "2094 × 1038 × 35 mm" },
+      { "label": "Garantie produit", "value": "25 ans" }
+    ]
+  },
+  {
+    "id": "onduleur-5kw",
+    "name": "Onduleur Hybride 5kW",
+    "type": "Onduleur",
+    "category": "Onduleurs",
+    "price": "6 900 000 GNF",
+    "priceEur": "≈ 800 EUR",
+    "tagline": "Pilotez votre énergie en temps réel.",
+    "description": "Onduleur hybride triphasé avec gestion intelligente de la batterie, priorisation des charges et application mobile. Compatible tous réseaux EGB.",
+    "specs": [
+      { "label": "Puissance nominale", "value": "5 000 W" },
+      { "label": "MPPT", "value": "2 × 500 V" },
+      { "label": "Efficacité", "value": "97,6 %" },
+      { "label": "Batterie", "value": "48 V LiFePO4" },
+      { "label": "Communication", "value": "Wi-Fi / Bluetooth" },
+      { "label": "Garantie", "value": "10 ans" }
+    ]
+  },
+  {
+    "id": "batterie-10kwh",
+    "name": "Batterie Solaire 10 kWh",
+    "type": "Batterie",
+    "category": "Batteries",
+    "price": "19 500 000 GNF",
+    "priceEur": "≈ 2 250 EUR",
+    "tagline": "De l'énergie, même quand le soleil se couche.",
+    "description": "Batterie au lithium fer phosphate (LiFePO4) haute densité, 6 000 cycles, borniers étanches. Idéale pour le stockage résidentiel et professionnel.",
+    "specs": [
+      { "label": "Capacité", "value": "10 kWh" },
+      { "label": "Chimie", "value": "LiFePO4" },
+      { "label": "Cycles de vie", "value": "6 000" },
+      { "label": "Tension", "value": "51,2 V" },
+      { "label": "Poids", "value": "98 kg" },
+      { "label": "Garantie", "value": "10 ans" }
+    ]
+  },
+  {
+    "id": "kit-premium",
+    "name": "Kit Maison Premium",
+    "type": "Kit",
+    "category": "Kits complets",
+    "price": "Sur devis",
+    "priceEur": "",
+    "tagline": "Une maison autonome, clé en main.",
+    "description": "Kit complet 5 kW : 8 panneaux 550W, onduleur hybride 5kW, batterie 10 kWh, disjoncteurs et câbles. Pose et mise en service incluses à Conakry.",
+    "specs": [
+      { "label": "Production", "value": "6 800 kWh / an" },
+      { "label": "Panneaux", "value": "8 × 550 Wc" },
+      { "label": "Stockage", "value": "10 kWh" },
+      { "label": "Autonomie", "value": "Jusqu'à 2 jours" },
+      { "label": "Pose", "value": "Incluse (Conakry)" },
+      { "label": "Garantie globale", "value": "10 ans" }
+    ]
+  },
+  {
+    "id": "pompe-solaire",
+    "name": "Pompe Solaire de Forage",
+    "type": "Solution",
+    "category": "Solaire agricole",
+    "price": "Sur devis",
+    "priceEur": "",
+    "tagline": "De l'eau où il y a du soleil.",
+    "description": "Système de pompage solaire submersible 2,2 kW capable de remonter 30 m³/jour. Conçu pour les villages éloignés du réseau EGB.",
+    "specs": [
+      { "label": "Débit", "value": "30 m³ / jour" },
+      { "label": "Hauteur manométrique", "value": "60 m" },
+      { "label": "Alimentation", "value": "Panneaux solaires" },
+      { "label": "Contrôleur", "value": "MPPT intégré" },
+      { "label": "Installation", "value": "Sur site" },
+      { "label": "Garantie", "value": "5 ans" }
+    ]
+  }
+]

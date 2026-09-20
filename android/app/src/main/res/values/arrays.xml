@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="quote_products">
+        <item>Panneau solaire 550W</item>
+        <item>Panneau solaire 450W</item>
+        <item>Onduleur hybride 5kW</item>
+        <item>Batterie 10 kWh</item>
+        <item>Kit maison premium</item>
+        <item>Pompe solaire de forage</item>
+        <item>Autre / projet sur mesure</item>
+    </string-array>
+</resources>

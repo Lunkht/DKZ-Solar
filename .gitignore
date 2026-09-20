@@ -1,0 +1,16 @@
+# Node
+node_modules/
+web/dist/
+web/.vite/
+
+# Gradle / Android
+android/.gradle/
+android/build/
+android/app/build/
+android/local.properties
+android/.idea/
+android/captures/
+
+# Divers
+.DS_Store
+Thumbs.db

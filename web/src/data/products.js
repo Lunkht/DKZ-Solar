@@ -1,0 +1,158 @@
+export const products = [
+  {
+    id: 'panneau-550w',
+    type: 'Panneau',
+    name: 'Panneau Solaire 550W',
+    category: 'Panneaux solaires',
+    price: '3 250 000 GNF',
+    priceEur: '≈ 375 EUR',
+    tagline: 'Le meilleur rendement du marché.',
+    description:
+      'Panneau monocristallin haute efficacité (PERC) de 550W, idéal pour les toits de Conakry comme pour les sites ruraux. Garanti 25 ans.',
+    specs: [
+      { label: 'Puissance maximale', value: '550 Wc' },
+      { label: 'Efficacité', value: '21,4 %' },
+      { label: 'Tension (Vmp)', value: '42,0 V' },
+      { label: 'Courant (Imp)', value: '13,1 A' },
+      { label: 'Dimensions', value: '2279 × 1134 × 35 mm' },
+      { label: 'Garantie produit', value: '25 ans' },
+    ],
+    swatch: 'hsl(42 100% 55%)',
+    hero: '550w',
+  },
+  {
+    id: 'panneau-450w',
+    type: 'Panneau',
+    name: 'Panneau Solaire 450W',
+    category: 'Panneaux solaires',
+    price: '2 750 000 GNF',
+    priceEur: '≈ 320 EUR',
+    tagline: 'Polyvalent, compact et fiable.',
+    description:
+      'Panneau monocristallin 450W au format réduit, parfait pour les installations résidentielles et les pompes solaires. Forte tolérance à la chaleur.',
+    specs: [
+      { label: 'Puissance maximale', value: '450 Wc' },
+      { label: 'Efficacité', value: '20,8 %' },
+      { label: 'Tension (Vmp)', value: '41,2 V' },
+      { label: 'Courant (Imp)', value: '10,9 A' },
+      { label: 'Dimensions', value: '2094 × 1038 × 35 mm' },
+      { label: 'Garantie produit', value: '25 ans' },
+    ],
+    swatch: 'hsl(210 90% 58%)',
+    hero: '450w',
+  },
+  {
+    id: 'onduleur-5kw',
+    type: 'Onduleur',
+    name: 'Onduleur Hybride 5kW',
+    category: 'Onduleurs',
+    price: '6 900 000 GNF',
+    priceEur: '≈ 800 EUR',
+    tagline: 'Pilotez votre énergie en temps réel.',
+    description:
+      'Onduleur hybride triphasé avec gestion intelligente de la batterie, priorisation des charges et application mobile. Compatible tous réseaux EGB.',
+    specs: [
+      { label: 'Puissance nominale', value: '5 000 W' },
+      { label: 'MPPT', value: '2 × 500 V' },
+      { label: 'Efficacité', value: '97,6 %' },
+      { label: 'Batterie', value: '48 V LiFePO4' },
+      { label: 'Communication', value: 'Wi-Fi / Bluetooth' },
+      { label: 'Garantie', value: '10 ans' },
+    ],
+    swatch: 'hsl(160 70% 45%)',
+    hero: 'inverter',
+  },
+  {
+    id: 'batterie-10kwh',
+    type: 'Batterie',
+    name: 'Batterie Solaire 10 kWh',
+    category: 'Batteries',
+    price: '19 500 000 GNF',
+    priceEur: '≈ 2 250 EUR',
+    tagline: 'De l’énergie, même quand le soleil se couche.',
+    description:
+      'Batterie au lithium fer phosphate (LiFePO4) haute densité, 6 000 cycles, borniers étanches. Idéale pour le stockage résidentiel et professionnel.',
+    specs: [
+      { label: 'Capacité', value: '10 kWh' },
+      { label: 'Chimie', value: 'LiFePO4' },
+      { label: 'Cycles de vie', value: '6 000' },
+      { label: 'Tension', value: '51,2 V' },
+      { label: 'Poids', value: '98 kg' },
+      { label: 'Garantie', value: '10 ans' },
+    ],
+    swatch: 'hsl(280 70% 55%)',
+    hero: 'battery',
+  },
+  {
+    id: 'kit-premium',
+    type: 'Kit',
+    name: 'Kit Maison Premium',
+    category: 'Kits complets',
+    price: 'Sur devis',
+    priceEur: '',
+    tagline: 'Une maison autonome, clé en main.',
+    description:
+      'Kit complet 5 kW : 8 panneaux 550W, onduleur hybride 5kW, batterie 10 kWh, disjoncteurs et câbles. Pose et mise en service incluses à Conakry.',
+    specs: [
+      { label: 'Production', value: '6 800 kWh / an' },
+      { label: 'Panneaux', value: '8 × 550 Wc' },
+      { label: 'Stockage', value: '10 kWh' },
+      { label: 'Autonomie', value: 'Jusqu’à 2 jours' },
+      { label: 'Pose', value: 'Incluse (Conakry)' },
+      { label: 'Garantie globale', value: '10 ans' },
+    ],
+    swatch: 'hsl(20 90% 55%)',
+    hero: 'kit',
+  },
+  {
+    id: 'pompe-solaire',
+    type: 'Solution',
+    name: 'Pompe Solaire de Forage',
+    category: 'Solaire agricole',
+    price: 'Sur devis',
+    priceEur: '',
+    tagline: 'De l’eau où il y a du soleil.',
+    description:
+      'Système de pompage solaire submersible 2,2 kW capable de remonter 30 m³/jour. Conçu pour les villages éloignés du réseau EGB.',
+    specs: [
+      { label: 'Débit', value: '30 m³ / jour' },
+      { label: 'Hauteur manométrique', value: '60 m' },
+      { label: 'Alimentation', value: 'Panneaux solaires' },
+      { label: 'Contrôleur', value: 'MPPT intégré' },
+      { label: 'Installation', value: 'Sur site' },
+      { label: 'Garantie', value: '5 ans' },
+    ],
+    swatch: 'hsl(190 80% 50%)',
+    hero: 'pump',
+  },
+]
+
+export const stats = [
+  { value: '1,2 MWc', label: 'Installé depuis 2018' },
+  { value: '400+', label: 'Clients servis en Guinée' },
+  { value: '33', label: 'Préfectures couvertes' },
+  { value: '25 ans', label: 'De garantie sur les panneaux' },
+]
+
+export const faq = [
+  {
+    q: 'Livrez-vous dans toute la Guinée ?',
+    a: 'Oui. Nous livrons à Conakry et dans les 33 préfectures via nos partenaires de transport, sous 5 à 10 jours ouvrés.',
+  },
+  {
+    q: 'Proposez-vous l’installation ?',
+    a: 'Oui, nos techniciens certifiés installent à Conakry et ses environs. Pour les régions, nous formons un artisan local partenaire.',
+  },
+  {
+    q: 'Faut-il être connecté au réseau EGB ?',
+    a: 'Non. En mode autonome (off-grid), vous produisez et stockez votre propre énergie. Vous pouvez aussi combiner avec le réseau.',
+  },
+  {
+    q: 'Quels moyens de paiement acceptez-vous ?',
+    a: 'Virement bancaire, cash à la livraison, et Mobile Money (Orange Money, MTN MoMo, OMA).',
+  },
+  {
+    q: 'Quelle est la garantie ?',
+    a: '25 ans sur les panneaux (performance), 10 ans sur onduleurs et batteries, plus un support technique à vie sur vos installations.',
+  },
+]
