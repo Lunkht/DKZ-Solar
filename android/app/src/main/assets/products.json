@@ -7,6 +7,7 @@
     "price": "3 250 000 GNF",
     "priceEur": "≈ 375 EUR",
     "tagline": "Le meilleur rendement du marché.",
+    "imageUrl": "https://images.unsplash.com/photo-1509391366360-fe5bb584850a?q=80&w=600",
     "description": "Panneau monocristallin haute efficacité (PERC) de 550W, idéal pour les toits de Conakry comme pour les sites ruraux. Garanti 25 ans.",
     "specs": [
       { "label": "Puissance maximale", "value": "550 Wc" },
@@ -25,6 +26,7 @@
     "price": "2 750 000 GNF",
     "priceEur": "≈ 320 EUR",
     "tagline": "Polyvalent, compact et fiable.",
+    "imageUrl": "https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?q=80&w=600",
     "description": "Panneau monocristallin 450W au format réduit, parfait pour les installations résidentielles et les pompes solaires. Forte tolérance à la chaleur.",
     "specs": [
       { "label": "Puissance maximale", "value": "450 Wc" },
@@ -43,6 +45,7 @@
     "price": "6 900 000 GNF",
     "priceEur": "≈ 800 EUR",
     "tagline": "Pilotez votre énergie en temps réel.",
+    "imageUrl": "https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?q=80&w=600",
     "description": "Onduleur hybride triphasé avec gestion intelligente de la batterie, priorisation des charges et application mobile. Compatible tous réseaux EGB.",
     "specs": [
       { "label": "Puissance nominale", "value": "5 000 W" },
@@ -61,6 +64,7 @@
     "price": "19 500 000 GNF",
     "priceEur": "≈ 2 250 EUR",
     "tagline": "De l'énergie, même quand le soleil se couche.",
+    "imageUrl": "https://images.unsplash.com/photo-1593941707882-a5bba14938c7?q=80&w=600",
     "description": "Batterie au lithium fer phosphate (LiFePO4) haute densité, 6 000 cycles, borniers étanches. Idéale pour le stockage résidentiel et professionnel.",
     "specs": [
       { "label": "Capacité", "value": "10 kWh" },
@@ -79,6 +83,7 @@
     "price": "Sur devis",
     "priceEur": "",
     "tagline": "Une maison autonome, clé en main.",
+    "imageUrl": "https://images.unsplash.com/photo-1497440001374-f26997328c1b?q=80&w=600",
     "description": "Kit complet 5 kW : 8 panneaux 550W, onduleur hybride 5kW, batterie 10 kWh, disjoncteurs et câbles. Pose et mise en service incluses à Conakry.",
     "specs": [
       { "label": "Production", "value": "6 800 kWh / an" },
@@ -97,6 +102,7 @@
     "price": "Sur devis",
     "priceEur": "",
     "tagline": "De l'eau où il y a du soleil.",
+    "imageUrl": "https://images.unsplash.com/photo-1581092921461-7d657d030960?q=80&w=600",
     "description": "Système de pompage solaire submersible 2,2 kW capable de remonter 30 m³/jour. Conçu pour les villages éloignés du réseau EGB.",
     "specs": [
       { "label": "Débit", "value": "30 m³ / jour" },

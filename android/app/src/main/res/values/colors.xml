@@ -1,29 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- Palette Principale -->
-    <color name="bg">#0A0A0A</color>
-    <color name="bg_soft">#121212</color>
-    <color name="surface_custom">#1A1A1A</color>
+    <!-- Palette Light - Thème Noir, Jaune & Vert -->
+    <color name="bg">#F4F5F0</color> <!-- Fond très clair tirant légèrement sur le vert -->
+    <color name="bg_soft">#FFFFFF</color>
+    <color name="surface_custom">#FFFFFF</color>
 
-    <!-- Accent Solaire -->
-    <color name="accent">#FFC107</color>
-    <color name="accent_dark">#E6AF00</color>
-    <color name="accent_alpha">#26FFC107</color>
+    <color name="accent">#80B918</color> <!-- Vert olive -->
+    <color name="accent_dark">#63960F</color>
+    <color name="accent_alpha">#1A80B918</color>
 
-    <!-- Typographie -->
-    <color name="text_primary">#FFFFFF</color>
-    <color name="text_secondary">#B0B0B0</color>
-    <color name="text_dim">#808080</color>
+    <color name="secondary_orange">#EEF800</color> <!-- Jaune acide -->
+    <color name="secondary_orange_alpha">#1AEEF800</color>
 
-    <!-- Éléments UI -->
-    <color name="border_subtle">#1AFFFFFF</color>
-    <color name="stroke">#26FFFFFF</color>
+    <color name="text_primary">#0A0A09</color> <!-- Noir presque pur -->
+    <color name="text_secondary">#80B918</color>
+    <color name="text_dim">#71726A</color>
 
-    <!-- Utilitaires -->
+    <color name="border_subtle">#D9DAD3</color>
+    <color name="stroke">#E8E9E2</color>
+
+    <!-- Gradients Hero/Product -->
+    <color name="hero_start">#EAF0D8</color>
+    <color name="hero_center">#F4F5F0</color>
+    <color name="hero_end">#FFFFFF</color>
+
+    <color name="product_bg_start">#E9EED2</color>
+    <color name="product_bg_center">#F4F5F0</color>
+    <color name="product_bg_end">#FFFFFF</color>
+
     <color name="black">#000000</color>
     <color name="white">#FFFFFF</color>
 
-    <!-- Compatibilité anciens noms si nécessaire -->
-    <color name="text">#FFFFFF</color>
+    <!-- Compatibilité -->
+    <color name="text">@color/text_primary</color>
     <color name="card">@color/surface_custom</color>
 </resources>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="Theme.DkzSolar" parent="Theme.Material3.Dark.NoActionBar">
+    <style name="Theme.DkzSolar" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Couleurs de base -->
         <item name="colorPrimary">@color/accent</item>
         <item name="colorOnPrimary">@color/black</item>
@@ -11,9 +11,13 @@
         <!-- Barre de statut et navigation -->
         <item name="android:statusBarColor">@color/bg</item>
         <item name="android:navigationBarColor">@color/bg</item>
-        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowLightStatusBar">?attr/isLightTheme</item>
 
-        <!-- Désactiver les effets Material 3 par défaut sur certains composants si possible -->
+        <!-- Compatibilité BottomNav -->
+        <item name="itemIconTint">@color/nav_item_tint</item>
+        <item name="itemTextColor">@color/nav_item_tint</item>
+
+        <!-- Désactiver les effets Material 3 par défaut -->
         <item name="textAppearanceHeadlineMedium">@style/TextHeadline</item>
         <item name="textAppearanceBodyMedium">@style/TextBody</item>
     </style>

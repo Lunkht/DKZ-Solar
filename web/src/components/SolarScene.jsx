@@ -1,4 +1,4 @@
-export default function SolarScene({ variant = '550w', swatch = '#ffb800', className = '' }) {
+export default function SolarScene({ variant = '550w', swatch = '#eef800', className = '' }) {
   const frame = { stroke: swatch, strokeWidth: 4, fill: 'rgba(255,255,255,0.03)', rx: 4 }
 
   const drawPanels = (n, w = 210) => {

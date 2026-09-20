@@ -86,7 +86,7 @@ Ou simplement **Android Studio** → Ouvrir `dkz-solar/android` → Run ▶.
 
 | Élément       | Couleur   |
 |---------------|-----------|
-| Fond          | `#0A0A0A` |
-| Accent (soleil)| `#FFB800` |
-| Texte         | `#F5F5F5` |
+| Fond          | `#0A0A09` |
+| Accent (soleil)| `#EEF800` |
+| Texte         | `#80B918` |
 | Texte atténué | `#A3A3A3` |

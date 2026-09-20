@@ -8,9 +8,9 @@ export default function Footer() {
           <div className="footer-brand">
             <Link to="/" className="logo">
               <svg className="logo-badge" viewBox="0 0 64 64" fill="none">
-                <rect width="64" height="64" rx="12" fill="#0a0a0a" stroke="rgba(255,255,255,0.12)" />
-                <path d="M12 46h40M20 46l6-18M42 46l-4-18M26 28h12M30 28l4 18" stroke="#FFB800" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
-                <path d="M20 10v6M32 10v6M44 10v6" stroke="#FFB800" strokeWidth="3" strokeLinecap="round" />
+                <rect width="64" height="64" rx="12" fill="#0a0a09" stroke="rgba(255,255,255,0.12)" />
+                <path d="M12 46h40M20 46l6-18M42 46l-4-18M26 28h12M30 28l4 18" stroke="#EEF800" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+                <path d="M20 10v6M32 10v6M44 10v6" stroke="#EEF800" strokeWidth="3" strokeLinecap="round" />
               </svg>
               <span>DKZ&nbsp;SOLAR</span>
             </Link>

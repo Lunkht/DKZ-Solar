@@ -2,12 +2,15 @@ package com.dkzsolar.app.ui.catalog;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.bumptech.glide.Glide;
 import com.dkzsolar.app.MainActivity;
 import com.dkzsolar.app.R;
 import com.dkzsolar.app.data.ProductRepository;
@@ -33,6 +36,7 @@ public class ProductDetailActivity extends AppCompatActivity {
         }
 
         TextView title = findViewById(R.id.detail_title);
+        ImageView image = findViewById(R.id.detail_image);
         TextView type = findViewById(R.id.detail_type);
         TextView tagline = findViewById(R.id.detail_tagline);
         TextView description = findViewById(R.id.detail_description);
@@ -43,16 +47,19 @@ public class ProductDetailActivity extends AppCompatActivity {
         setTitle(p.name);
         title.setText(p.name);
         type.setText(p.category);
+
+        Glide.with(this).load(p.imageUrl).into(image);
+
         tagline.setText(p.tagline);
         description.setText(p.description);
         price.setText(p.price);
         if (p.priceEur == null || p.priceEur.isEmpty()) {
-            priceEur.setVisibility(android.view.View.GONE);
+            priceEur.setVisibility(View.GONE);
         } else {
             priceEur.setText(p.priceEur);
         }
 
-        android.view.View quoteButton = findViewById(R.id.detail_quote);
+        View quoteButton = findViewById(R.id.detail_quote);
         quoteButton.setOnClickListener(v -> {
             Intent i = new Intent(this, MainActivity.class);
             i.putExtra(MainActivity.EXTRA_TAB, R.id.nav_quote);
@@ -79,7 +86,7 @@ public class ProductDetailActivity extends AppCompatActivity {
             LinearLayout.LayoutParams kp = new LinearLayout.LayoutParams(0, LinearLayout.LayoutParams.WRAP_CONTENT, 1f);
             LinearLayout.LayoutParams vp = new LinearLayout.LayoutParams(
                     LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
-            v.setTextAlignment(android.view.View.TEXT_ALIGNMENT_TEXT_END);
+            v.setTextAlignment(View.TEXT_ALIGNMENT_TEXT_END);
 
             row.addView(k, kp);
             row.addView(v, vp);

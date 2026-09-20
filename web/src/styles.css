@@ -1,16 +1,16 @@
 :root {
-  --bg: #0a0a0a;
+  --bg: #0a0a09;
   --bg-soft: #121212;
   --bg-card: #161616;
-  --text: #f5f5f5;
+  --text: #80b918;
   --text-dim: #a3a3a3;
-  --accent: #ffb800;
+  --accent: #eef800;
   --on-accent: #111111;
-  --accent-soft: rgba(255, 184, 0, 0.12);
-  --accent-border: rgba(255, 184, 0, 0.25);
+  --accent-soft: rgba(238, 248, 0, 0.12);
+  --accent-border: rgba(238, 248, 0, 0.25);
   --line: rgba(255, 255, 255, 0.08);
-  --nav-bg: rgba(10, 10, 10, 0.82);
-  --menu-bg: rgba(10, 10, 10, 0.98);
+  --nav-bg: rgba(10, 10, 9, 0.82);
+  --menu-bg: rgba(10, 10, 9, 0.98);
   --grid-line: rgba(255, 255, 255, 0.05);
   --blue-glow: rgba(30, 120, 240, 0.14);
   --input-bg: #101010;
@@ -19,12 +19,12 @@
   --btn-dark-bg: rgba(23, 23, 23, 0.9);
   --btn-dark-hover: #2a2a2a;
   --btn-dark-border: rgba(255, 255, 255, 0.15);
-  --btn-dark-text: #f5f5f5;
+  --btn-dark-text: #80b918;
   --btn-outline-border: rgba(255, 255, 255, 0.35);
   --btn-outline-hover: rgba(255, 255, 255, 0.08);
   --shadow: 0 24px 60px rgba(0, 0, 0, 0.5);
   --toast-bg: #1c1c1c;
-  --toast-text: #f5f5f5;
+  --toast-text: #80b918;
   --footer-bg: #080808;
   --radius: 16px;
   --nav-h: 60px;
@@ -39,10 +39,10 @@ html[data-theme="light"] {
   --bg-card: #ffffff;
   --text: #141414;
   --text-dim: #5b5b5b;
-  --accent: #b57c00;
-  --on-accent: #ffffff;
-  --accent-soft: rgba(181, 124, 0, 0.1);
-  --accent-border: rgba(181, 124, 0, 0.28);
+  --accent: #80b918;
+  --on-accent: #111111;
+  --accent-soft: rgba(128, 185, 24, 0.1);
+  --accent-border: rgba(128, 185, 24, 0.28);
   --line: rgba(0, 0, 0, 0.1);
   --nav-bg: rgba(255, 255, 255, 0.85);
   --menu-bg: #fbfbfa;
@@ -59,7 +59,7 @@ html[data-theme="light"] {
   --btn-outline-hover: rgba(0, 0, 0, 0.05);
   --shadow: 0 24px 60px rgba(0, 0, 0, 0.14);
   --toast-bg: #1c1c1c;
-  --toast-text: #f5f5f5;
+  --toast-text: #80b918;
   --footer-bg: #ffffff;
   color-scheme: light;
 }
@@ -214,7 +214,7 @@ section { position: relative; }
   text-align: center;
   padding: 120px 24px 80px;
   background:
-    radial-gradient(1100px 620px at 50% -8%, rgba(255, 184, 0, 0.16), transparent 60%),
+    radial-gradient(1100px 620px at 50% -8%, rgba(238, 248, 0, 0.16), transparent 60%),
     radial-gradient(900px 520px at 85% 115%, var(--blue-glow), transparent 60%),
     var(--bg);
   position: relative;
@@ -385,7 +385,7 @@ section { position: relative; }
 
 /* ---------- Solar illustration ---------- */
 .solar-scene { width: min(340px, 80%); height: auto; }
-.solar-scene text { font-size: 11px; fill: var(--swatch, #ffb800); }
+.solar-scene text { font-size: 11px; fill: var(--swatch, #eef800); }
 
 /* ---------- Alternating feature rows ---------- */
 .rows { padding: 40px 0 120px; }
@@ -474,7 +474,7 @@ section { position: relative; }
 .quote {
   padding: 120px 0;
   background:
-    radial-gradient(900px 520px at 50% 115%, rgba(255, 184, 0, 0.1), transparent 60%),
+    radial-gradient(900px 520px at 50% 115%, rgba(238, 248, 0, 0.1), transparent 60%),
     var(--bg-soft);
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
@@ -577,7 +577,7 @@ section { position: relative; }
   text-align: center;
   padding: 110px 24px;
   background:
-    radial-gradient(760px 420px at 50% 120%, rgba(255, 184, 0, 0.14), transparent 65%),
+    radial-gradient(760px 420px at 50% 120%, rgba(238, 248, 0, 0.14), transparent 65%),
     var(--bg);
 }
 .cta-band h2 { font-size: clamp(2rem, 4vw, 3.2rem); margin-bottom: 18px; }

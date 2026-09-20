@@ -3,11 +3,14 @@ package com.dkzsolar.app.ui.catalog;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions;
 import com.dkzsolar.app.R;
 import com.dkzsolar.app.models.Product;
 
@@ -43,6 +46,13 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.Holder> 
         h.tagline.setText(p.tagline);
         h.price.setText(p.price);
         h.category.setText(p.category);
+
+        Glide.with(h.itemView.getContext())
+                .load(p.imageUrl)
+                .transition(DrawableTransitionOptions.withCrossFade())
+                .placeholder(R.drawable.bg_product)
+                .into(h.image);
+
         h.itemView.setOnClickListener(v -> {
             if (listener != null) listener.onProductClick(p);
         });
@@ -54,6 +64,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.Holder> 
     }
 
     static class Holder extends RecyclerView.ViewHolder {
+        final ImageView image;
         final TextView type;
         final TextView name;
         final TextView tagline;
@@ -62,6 +73,7 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.Holder> 
 
         Holder(@NonNull View itemView) {
             super(itemView);
+            image = itemView.findViewById(R.id.product_image);
             type = itemView.findViewById(R.id.product_type);
             name = itemView.findViewById(R.id.product_name);
             tagline = itemView.findViewById(R.id.product_tagline);

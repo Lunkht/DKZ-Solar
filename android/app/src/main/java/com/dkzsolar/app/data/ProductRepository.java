@@ -47,6 +47,7 @@ public class ProductRepository {
                         o.optString("priceEur"),
                         o.getString("tagline"),
                         o.getString("description"),
+                        o.optString("imageUrl", "https://images.unsplash.com/photo-1509391366360-fe5bb584850a?q=80&w=500"),
                         labels,
                         values
                 ));

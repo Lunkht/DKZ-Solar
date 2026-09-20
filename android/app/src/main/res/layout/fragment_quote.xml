@@ -15,18 +15,19 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:letterSpacing="0.2"
             android:text="DEVIS GRATUIT"
             android:textColor="@color/accent"
             android:textSize="12sp"
             android:textStyle="bold"
-            android:letterSpacing="0.2" />
+            android:textAllCaps="true" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
             android:text="Obtenez votre devis en 24 h"
-            android:textColor="@color/text"
+            android:textColor="@color/text_primary"
             android:textSize="24sp"
             android:textStyle="bold" />
 
@@ -34,125 +35,104 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
-            android:layout_marginBottom="20dp"
+            android:layout_marginBottom="24dp"
             android:text="Décrivez votre besoin : notre équipe vous rappelle avec une proposition personnalisée."
-            android:textColor="@color/text_dim"
+            android:textColor="@color/text_secondary"
             android:textSize="14sp" />
 
-        <com.google.android.material.textfield.TextInputLayout
-            style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+        <EditText
+            android:id="@+id/quote_name"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:layout_height="56dp"
+            android:background="@drawable/bg_input"
             android:hint="Nom complet *"
-            app:boxBackgroundColor="@color/bg_soft"
-            app:boxStrokeColor="@color/accent"
-            app:boxStrokeWidth="1dp">
+            android:imeOptions="actionNext"
+            android:inputType="textPersonName"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:textColor="@color/text_primary"
+            android:textColorHint="@color/text_dim" />
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/quote_name"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:imeOptions="actionNext"
-                android:inputType="textPersonName"
-                android:textColor="@color/text" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+        <EditText
+            android:id="@+id/quote_phone"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="56dp"
             android:layout_marginTop="12dp"
+            android:background="@drawable/bg_input"
             android:hint="Téléphone *"
-            app:boxBackgroundColor="@color/bg_soft"
-            app:boxStrokeColor="@color/accent"
-            app:boxStrokeWidth="1dp">
+            android:imeOptions="actionNext"
+            android:inputType="phone"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:textColor="@color/text_primary"
+            android:textColorHint="@color/text_dim" />
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/quote_phone"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:imeOptions="actionNext"
-                android:inputType="phone"
-                android:textColor="@color/text" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <com.google.android.material.textfield.TextInputLayout
-            style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+        <EditText
+            android:id="@+id/quote_location"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="56dp"
             android:layout_marginTop="12dp"
+            android:background="@drawable/bg_input"
             android:hint="Localité *"
-            app:boxBackgroundColor="@color/bg_soft"
-            app:boxStrokeColor="@color/accent"
-            app:boxStrokeWidth="1dp">
-
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/quote_location"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:imeOptions="actionNext"
-                android:inputType="textCapWords"
-                android:textColor="@color/text" />
-        </com.google.android.material.textfield.TextInputLayout>
+            android:imeOptions="actionNext"
+            android:inputType="textCapWords"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:textColor="@color/text_primary"
+            android:textColorHint="@color/text_dim" />
 
         <Spinner
             android:id="@+id/quote_product"
+            style="@style/SpinnerDkz"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="12dp"
+            android:entries="@array/quote_products"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp" />
+
+        <EditText
+            android:id="@+id/quote_message"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="12dp"
             android:background="@drawable/bg_input"
-            android:entries="@array/quote_products"
-            android:minHeight="52dp"
-            android:paddingStart="16dp"
-            android:paddingEnd="16dp"
-            android:textColor="@color/text"
-            style="@style/SpinnerDkz" />
-
-        <com.google.android.material.textfield.TextInputLayout
-            style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
+            android:gravity="top"
             android:hint="Votre projet"
-            app:boxBackgroundColor="@color/bg_soft"
-            app:boxStrokeColor="@color/accent"
-            app:boxStrokeWidth="1dp">
+            android:inputType="textMultiLine"
+            android:minLines="3"
+            android:padding="16dp"
+            android:textColor="@color/text_primary"
+            android:textColorHint="@color/text_dim" />
 
-            <com.google.android.material.textfield.TextInputEditText
-                android:id="@+id/quote_message"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="top"
-                android:inputType="textMultiLine"
-                android:minLines="3"
-                android:textColor="@color/text" />
-        </com.google.android.material.textfield.TextInputLayout>
-
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/quote_send"
-            style="@style/Widget.Material3.Button"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:backgroundTint="@color/accent"
+            android:layout_height="56dp"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/bg_button_primary"
             android:text="Enregistrer ma demande"
+            android:textAllCaps="false"
             android:textColor="@color/black"
+            android:textSize="16sp"
             android:textStyle="bold" />
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/quote_whatsapp"
-            style="@style/Widget.Material3.Button.OutlinedButton"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:layout_height="56dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/bg_button_outline"
             android:text="Envoyer sur WhatsApp"
-            android:textColor="@color/text" />
+            android:textAllCaps="false"
+            android:textColor="@color/accent"
+            android:textSize="16sp"
+            android:textStyle="bold" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="14dp"
+            android:layout_marginTop="16dp"
             android:gravity="center"
             android:text="Vos données restent confidentielles."
             android:textColor="@color/text_dim"

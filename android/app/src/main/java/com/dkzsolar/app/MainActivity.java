@@ -12,6 +12,7 @@ import com.dkzsolar.app.ui.catalog.CatalogFragment;
 import com.dkzsolar.app.ui.contact.ContactFragment;
 import com.dkzsolar.app.ui.home.HomeFragment;
 import com.dkzsolar.app.ui.quote.QuoteFragment;
+import com.dkzsolar.app.ui.settings.SettingsFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
@@ -37,6 +38,9 @@ public class MainActivity extends AppCompatActivity {
                 return true;
             } else if (id == R.id.nav_contact) {
                 showFragment(new ContactFragment());
+                return true;
+            } else if (id == R.id.nav_settings) {
+                showFragment(new SettingsFragment());
                 return true;
             } else {
                 showFragment(new HomeFragment());

@@ -14,7 +14,7 @@ export default function Ticker() {
     <span className="ticker-item" key={i}>
       <b>{it.b}</b>
       <span>{it.t}{it.extra || ''}</span>
-      <span style={{ color: 'rgba(255,184,0,0.6)' }}>◆</span>
+      <span style={{ color: 'rgba(238,248,0,0.6)' }}>◆</span>
     </span>
   ))
   return (
