@@ -2,6 +2,7 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/bg"
     android:fillViewport="true">
 
@@ -11,88 +12,99 @@
         android:orientation="vertical"
         android:padding="20dp">
 
+        <!-- Hero Section -->
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/bg_hero"
             android:gravity="center"
             android:orientation="vertical"
-            android:padding="28dp">
+            android:padding="32dp">
+
+            <ImageView
+                android:layout_width="48dp"
+                android:layout_height="48dp"
+                android:src="@drawable/ic_sun_large"
+                app:tint="@color/accent" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:drawableTop="@drawable/ic_sun_large"
-                android:drawablePadding="14dp"
+                android:layout_marginTop="16dp"
                 android:fontFamily="sans-serif-black"
-                android:letterSpacing="0.06"
+                android:letterSpacing="0.1"
                 android:text="DKZ SOLAR"
-                android:textColor="@color/text"
-                android:textSize="22sp" />
+                android:textColor="@color/text_primary"
+                android:textSize="20sp" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="18dp"
+                android:layout_marginTop="20dp"
                 android:fontFamily="sans-serif-medium"
                 android:gravity="center"
-                android:text="L’énergie du soleil, au service de la Guinée"
-                android:textColor="@color/text"
-                android:textSize="26sp" />
+                android:text="L’énergie du soleil,\nau service de la Guinée"
+                android:textColor="@color/text_primary"
+                android:textSize="28sp"
+                android:lineSpacingExtra="4dp" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
+                android:layout_marginTop="16dp"
                 android:gravity="center"
-                android:text="Panneaux solaires, onduleurs et batteries haute performance — vendus, installés et garantis."
-                android:textColor="@color/text_dim"
-                android:textSize="14sp" />
+                android:text="Solutions photovoltaïques haute performance pour particuliers et entreprises."
+                android:textColor="@color/text_secondary"
+                android:textSize="15sp" />
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="26dp"
-                android:orientation="horizontal">
+                android:layout_marginTop="32dp"
+                android:orientation="vertical"
+                android:gravity="center">
 
-                <Button
+                <androidx.appcompat.widget.AppCompatButton
                     android:id="@+id/btn_explore"
-                    style="@style/Widget.Material3.Button"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:backgroundTint="@color/text"
-                    android:paddingLeft="22dp"
-                    android:paddingRight="22dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:background="@drawable/bg_button_primary"
                     android:text="Explorer le catalogue"
-                    android:textColor="@color/bg"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btn_quote"
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    android:layout_marginTop="12dp"
+                    android:background="@drawable/bg_button_outline"
+                    android:text="Demander un devis"
+                    android:textAllCaps="false"
+                    android:textColor="@color/accent"
+                    android:textSize="16sp"
                     android:textStyle="bold" />
             </LinearLayout>
-
-            <Button
-                android:id="@+id/btn_quote"
-                style="@style/Widget.Material3.Button.OutlinedButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
-                android:paddingLeft="22dp"
-                android:paddingRight="22dp"
-                android:text="Demander un devis"
-                android:textColor="@color/text" />
         </LinearLayout>
 
-        <GridLayout
+        <!-- Stats Section (Horizontal Cards) -->
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:columnCount="2"
-            android:rowCount="2">
+            android:orientation="horizontal"
+            android:baselineAligned="false">
 
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1"
                 android:background="@drawable/bg_card"
                 android:orientation="vertical"
-                android:padding="18dp">
+                android:padding="20dp">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -105,40 +117,20 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
                     android:text="Installé depuis 2018"
-                    android:textColor="@color/text_dim"
+                    android:textColor="@color/text_secondary"
                     android:textSize="13sp" />
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"
                 android:background="@drawable/bg_card"
                 android:orientation="vertical"
-                android:padding="18dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="400+"
-                    android:textColor="@color/accent"
-                    android:textSize="22sp"
-                    android:textStyle="bold" />
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Clients servis en Guinée"
-                    android:textColor="@color/text_dim"
-                    android:textSize="13sp" />
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="@drawable/bg_card"
-                android:orientation="vertical"
-                android:padding="18dp">
+                android:padding="20dp">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -151,17 +143,54 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
                     android:text="Préfectures couvertes"
-                    android:textColor="@color/text_dim"
+                    android:textColor="@color/text_secondary"
+                    android:textSize="13sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal"
+            android:baselineAligned="false">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_card"
+                android:orientation="vertical"
+                android:padding="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="400+"
+                    android:textColor="@color/accent"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="Clients satisfaits"
+                    android:textColor="@color/text_secondary"
                     android:textSize="13sp" />
             </LinearLayout>
 
             <LinearLayout
-                android:layout_width="match_parent"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_weight="1"
                 android:background="@drawable/bg_card"
                 android:orientation="vertical"
-                android:padding="18dp">
+                android:padding="20dp">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -174,17 +203,21 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="De garantie sur les panneaux"
-                    android:textColor="@color/text_dim"
+                    android:layout_marginTop="4dp"
+                    android:text="Garantie fabricant"
+                    android:textColor="@color/text_secondary"
                     android:textSize="13sp" />
             </LinearLayout>
-        </GridLayout>
+        </LinearLayout>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:text="Nous importons directement des fabricants certifiés IEC et TÜV : chaque panneau est contrôlé au port de Conakry avant mise à disposition. Installations dans toutes les préfectures, garantie jusqu’à 25 ans."
+            android:layout_marginTop="28dp"
+            android:layout_marginBottom="24dp"
+            android:gravity="center"
+            android:lineSpacingExtra="4dp"
+            android:text="Équipements certifiés IEC et TÜV. Installations professionnelles garanties dans toute la Guinée."
             android:textColor="@color/text_dim"
             android:textSize="14sp" />
     </LinearLayout>
