@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Link, useLocation } from 'react-router-dom'
+import useTheme from '../hooks/useTheme'
 
 const links = [
   { to: '/', label: 'Accueil' },
@@ -13,6 +14,7 @@ export default function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [open, setOpen] = useState(false)
   const { pathname } = useLocation()
+  const { theme, toggle } = useTheme()
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 24)
@@ -58,6 +60,23 @@ export default function Navbar() {
         </div>
 
         <div className="nav-links">
+          <button
+            className="theme-toggle"
+            onClick={toggle}
+            aria-label={theme === 'dark' ? 'Activer le thème clair' : 'Activer le thème sombre'}
+            title={theme === 'dark' ? 'Thème clair' : 'Thème sombre'}
+          >
+            {theme === 'dark' ? (
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <circle cx="12" cy="12" r="4.5" stroke="currentColor" strokeWidth="1.7" />
+                <path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.6 4.6l1.8 1.8M17.6 17.6l1.8 1.8M19.4 4.6l-1.8 1.8M6.4 17.6l-1.8 1.8" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" />
+              </svg>
+            ) : (
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M20.5 14.5A8.5 8.5 0 019.5 3.5a8.5 8.5 0 1011 11z" stroke="currentColor" strokeWidth="1.7" strokeLinejoin="round" />
+              </svg>
+            )}
+          </button>
           <a
             href="/#devis"
             onClick={(e) => {
@@ -94,6 +113,9 @@ export default function Navbar() {
             {l.label}
           </a>
         ))}
+        <button className="theme-toggle theme-toggle-row" onClick={toggle}>
+          {theme === 'dark' ? '☀️ Thème clair' : '🌙 Thème sombre'}
+        </button>
         <a
           href="/#devis"
           onClick={(e) => {

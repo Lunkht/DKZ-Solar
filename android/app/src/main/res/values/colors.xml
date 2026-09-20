@@ -1,13 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Palette Principale -->
     <color name="bg">#0A0A0A</color>
     <color name="bg_soft">#121212</color>
-    <color name="card">#161616</color>
-    <color name="card_elevated">#1D1D1D</color>
-    <color name="text">#F5F5F5</color>
-    <color name="text_dim">#A3A3A3</color>
-    <color name="accent">#FFB800</color>
-    <color name="accent_dim">#C78F00</color>
+    <color name="surface_custom">#1A1A1A</color>
+
+    <!-- Accent Solaire -->
+    <color name="accent">#FFC107</color>
+    <color name="accent_dark">#E6AF00</color>
+    <color name="accent_alpha">#26FFC107</color>
+
+    <!-- Typographie -->
+    <color name="text_primary">#FFFFFF</color>
+    <color name="text_secondary">#B0B0B0</color>
+    <color name="text_dim">#808080</color>
+
+    <!-- Éléments UI -->
+    <color name="border_subtle">#1AFFFFFF</color>
     <color name="stroke">#26FFFFFF</color>
+
+    <!-- Utilitaires -->
     <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+
+    <!-- Compatibilité anciens noms si nécessaire -->
+    <color name="text">#FFFFFF</color>
+    <color name="card">@color/surface_custom</color>
 </resources>
