@@ -21,20 +21,11 @@
             android:paddingStart="4dp">
 
             <ImageView
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                android:src="@drawable/ic_sun_large"
-                app:tint="@color/accent" />
-
-            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="8dp"
-                android:fontFamily="sans-serif-black"
-                android:letterSpacing="0.1"
-                android:text="DKZ SOLAR"
-                android:textColor="@color/text_primary"
-                android:textSize="16sp" />
+                android:src="@drawable/logo"
+                app:tint="@color/accent" />
+
         </LinearLayout>
 
         <!-- Hero ViewPager -->
