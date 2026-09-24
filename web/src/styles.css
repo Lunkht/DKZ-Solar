@@ -121,7 +121,7 @@ section { position: relative; }
   white-space: nowrap;
 }
 .btn:hover { transform: scale(1.04); }
-.btn-primary { background: var(--text); color: var(--bg); }
+.btn-primary { background: var(--text); color: #ffffff; }
 .btn-primary:hover { background: var(--accent); color: var(--on-accent); }
 .btn-dark { background: var(--btn-dark-bg); color: var(--btn-dark-text); backdrop-filter: blur(8px); border: 1px solid var(--btn-dark-border); }
 .btn-dark:hover { background: var(--btn-dark-hover); }
