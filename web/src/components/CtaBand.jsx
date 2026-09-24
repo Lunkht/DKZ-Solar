@@ -1,8 +1,10 @@
 import Reveal from './Reveal'
+import ElectricField from './ElectricField'
 
 export default function CtaBand() {
   return (
     <section className="cta-band">
+      <ElectricField />
       <Reveal>
         <h2>Passez au solaire dès aujourd’hui.</h2>
       </Reveal>

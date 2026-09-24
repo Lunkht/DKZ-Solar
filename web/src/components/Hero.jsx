@@ -1,8 +1,10 @@
 import Reveal from './Reveal'
+import ElectricField from './ElectricField'
 
 export default function Hero() {
   return (
     <section className="hero" id="accueil">
+      <ElectricField />
       <div className="hero-content">
         <Reveal>
           <span className="hero-eyebrow">⚡ Énergie solaire · Guinée 🇬🇳</span>
