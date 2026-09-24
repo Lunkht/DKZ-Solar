@@ -11,7 +11,7 @@ export default function Faq() {
         <Reveal className="section-head center">
           <div className="kicker">FAQ</div>
           <h2>Questions fréquentes</h2>
-          <p>Tout ce que vous devez savoir avant de passer au solaire avec DKZ Solar.</p>
+          <p>Tout ce que vous devez savoir avant de passer au solaire avec Solar Green.</p>
         </Reveal>
 
         <div className="faq-list">

@@ -29,6 +29,10 @@
   --radius: 16px;
   --nav-h: 60px;
   --font: 'Inter', system-ui, -apple-system, sans-serif;
+  --logo-bg: #0a0a09;
+  --logo-border: rgba(255, 255, 255, 0.12);
+  --logo-disc: #1b1400;
+  --logo-fg: #eef800;
 }
 
 html { color-scheme: dark; }
@@ -61,6 +65,10 @@ html[data-theme="light"] {
   --toast-bg: #1c1c1c;
   --toast-text: #80b918;
   --footer-bg: #ffffff;
+  --logo-bg: #ffffff;
+  --logo-border: rgba(0, 0, 0, 0.12);
+  --logo-disc: #eef800;
+  --logo-fg: #80b918;
   color-scheme: light;
 }
 
@@ -143,8 +151,11 @@ section { position: relative; }
   gap: 16px;
 }
 .logo { display: flex; align-items: center; gap: 10px; font-weight: 700; letter-spacing: 0.06em; }
-.logo-badge { width: auto; height: 32px; color: #ffffff; transition: color 0.4s ease; }
-html[data-theme="light"] .logo-badge { color: #141414; }
+.logo-badge { width: auto; height: 32px; }
+.logo-badge .lb-bg { fill: var(--logo-bg); transition: fill 0.4s ease; }
+.logo-badge .lb-border { stroke: var(--logo-border); transition: stroke 0.4s ease; }
+.logo-badge .lb-disc { fill: var(--logo-disc); transition: fill 0.4s ease; }
+.logo-badge .lb-fg { stroke: var(--logo-fg); transition: stroke 0.4s ease; }
 .nav-links { display: flex; gap: 26px; }
 .nav-links a {
   font-size: 0.82rem;

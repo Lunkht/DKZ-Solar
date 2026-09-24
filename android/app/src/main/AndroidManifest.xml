@@ -5,13 +5,13 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
-        android:name=".DkzApp"
+        android:name=".SolarGreenApp"
         android:allowBackup="true"
-        android:icon="@drawable/ic_launcher"
-        android:roundIcon="@drawable/ic_launcher"
+        android:icon="@mipmap/ic_launcher"
+        android:roundIcon="@mipmap/ic_launcher_round"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/Theme.DkzSolar">
+        android:theme="@style/Theme.SolarGreen">
 
         <activity
             android:name=".MainActivity"
@@ -28,7 +28,12 @@
             android:name=".ui.catalog.ProductDetailActivity"
             android:parentActivityName=".MainActivity"
             android:label="@string/app_name"
-            android:theme="@style/Theme.DkzSolar" />
+            android:theme="@style/Theme.SolarGreen" />
+
+        <activity
+            android:name=".ui.catalog.CategoryActivity"
+            android:parentActivityName=".MainActivity"
+            android:theme="@style/Theme.SolarGreen" />
     </application>
 
 </manifest>

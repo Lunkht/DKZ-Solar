@@ -1,0 +1,84 @@
+package com.solargreen.app.ui.catalog;
+
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions;
+import com.solargreen.app.R;
+import com.solargreen.app.models.Product;
+
+import java.util.List;
+
+public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.Holder> {
+
+    public interface Listener {
+        void onProductClick(Product product);
+    }
+
+    private final List<Product> items;
+    private final Listener listener;
+
+    public ProductAdapter(List<Product> items, Listener listener) {
+        this.items = items;
+        this.listener = listener;
+    }
+
+    @NonNull
+    @Override
+    public Holder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View v = LayoutInflater.from(parent.getContext())
+                .inflate(R.layout.item_product, parent, false);
+        return new Holder(v);
+    }
+
+    @Override
+    public void onBindViewHolder(@NonNull Holder h, int position) {
+        Product p = items.get(position);
+        h.type.setText(p.type);
+        h.name.setText(p.name);
+        h.tagline.setText(p.tagline);
+        h.price.setText(p.price);
+        h.category.setText(p.category);
+
+        Glide.with(h.itemView.getContext())
+                .load(p.imageUrl)
+                .transition(DrawableTransitionOptions.withCrossFade())
+                .placeholder(R.drawable.bg_product)
+                .into(h.image);
+
+        h.itemView.setOnClickListener(v -> {
+            if (listener != null) listener.onProductClick(p);
+        });
+    }
+
+    @Override
+    public int getItemCount() {
+        return items.size();
+    }
+
+    static class Holder extends RecyclerView.ViewHolder {
+        final ImageView image;
+        final TextView type;
+        final TextView name;
+        final TextView tagline;
+        final TextView price;
+        final TextView category;
+
+        Holder(@NonNull View itemView) {
+            super(itemView);
+            image = itemView.findViewById(R.id.product_image);
+            type = itemView.findViewById(R.id.product_type);
+            name = itemView.findViewById(R.id.product_name);
+            tagline = itemView.findViewById(R.id.product_tagline);
+            price = itemView.findViewById(R.id.product_price);
+            category = itemView.findViewById(R.id.product_category);
+        }
+    }
+}

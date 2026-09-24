@@ -1,11 +1,11 @@
-# DKZ Solar ⚡
+# Solar Green ⚡
 
 Exportation et vente de panneaux solaires en République de Guinée — site web vitrine + catalogue, et application Android native.
 
 ## Structure
 
 ```
-dkz-solar/
+solargreen/
 ├── web/        → Site vitrine (Vite + React, design type Tesla)
 ├── android/    → Application Android (Java natif, Gradle)
 └── README.md
@@ -20,7 +20,7 @@ Stack : **Vite + React** (SPA), design sombre type Tesla : hero plein écran, an
 ### Dev
 
 ```bash
-cd dkz-solar/web
+cd solargreen/web
 npm install
 npm run dev            # http://localhost:5173
 ```
@@ -39,7 +39,7 @@ il fonctionne donc aussi dans un sous-dossier.
 
 - Téléphone / WhatsApp : `web/src/components/Ticker.jsx`, `QuoteForm.jsx`, `Footer.jsx`
 - Email de réception des devis : `web/src/components/QuoteForm.jsx`
-  (`https://formsubmit.co/ajax/contact@dkzsolar.com`) — gratuit et sans backend.
+  (`https://formsubmit.co/ajax/contact@solargreen.com`) — gratuit et sans backend.
 - Produits et prix : `web/src/data/products.js`
 
 ---
@@ -56,12 +56,12 @@ Onglets : Accueil · Catalogue (RecyclerView + pages de détail) · Devis (sauve
 Prérequis : Android SDK (platform 34) + JDK 17 ou 21.
 
 ```bash
-cd dkz-solar/android
+cd solargreen/android
 gradlew assembleDebug
 # → app/build/outputs/apk/debug/app-debug.apk
 ```
 
-Ou simplement **Android Studio** → Ouvrir `dkz-solar/android` → Run ▶.
+Ou simplement **Android Studio** → Ouvrir `solargreen/android` → Run ▶.
 
 ### Installer sur un téléphone
 

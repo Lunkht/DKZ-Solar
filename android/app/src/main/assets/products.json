@@ -3,38 +3,28 @@
     "id": "panneau-550w",
     "name": "Panneau Solaire 550W",
     "type": "Panneau",
-    "category": "Panneaux solaires",
+    "category": "Panneaux",
     "price": "3 250 000 GNF",
-    "priceEur": "≈ 375 EUR",
     "tagline": "Le meilleur rendement du marché.",
     "imageUrl": "https://images.unsplash.com/photo-1509391366360-fe5bb584850a?q=80&w=600",
-    "description": "Panneau monocristallin haute efficacité (PERC) de 550W, idéal pour les toits de Conakry comme pour les sites ruraux. Garanti 25 ans.",
+    "description": "Panneau monocristallin haute efficacité (PERC) de 550W. Garanti 25 ans.",
     "specs": [
-      { "label": "Puissance maximale", "value": "550 Wc" },
-      { "label": "Efficacité", "value": "21,4 %" },
-      { "label": "Tension (Vmp)", "value": "42,0 V" },
-      { "label": "Courant (Imp)", "value": "13,1 A" },
-      { "label": "Dimensions", "value": "2279 × 1134 × 35 mm" },
-      { "label": "Garantie produit", "value": "25 ans" }
+      { "label": "Puissance", "value": "550 Wc" },
+      { "label": "Garantie", "value": "25 ans" }
     ]
   },
   {
     "id": "panneau-450w",
     "name": "Panneau Solaire 450W",
     "type": "Panneau",
-    "category": "Panneaux solaires",
+    "category": "Panneaux",
     "price": "2 750 000 GNF",
-    "priceEur": "≈ 320 EUR",
     "tagline": "Polyvalent, compact et fiable.",
     "imageUrl": "https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?q=80&w=600",
-    "description": "Panneau monocristallin 450W au format réduit, parfait pour les installations résidentielles et les pompes solaires. Forte tolérance à la chaleur.",
+    "description": "Panneau monocristallin 450W au format réduit.",
     "specs": [
-      { "label": "Puissance maximale", "value": "450 Wc" },
-      { "label": "Efficacité", "value": "20,8 %" },
-      { "label": "Tension (Vmp)", "value": "41,2 V" },
-      { "label": "Courant (Imp)", "value": "10,9 A" },
-      { "label": "Dimensions", "value": "2094 × 1038 × 35 mm" },
-      { "label": "Garantie produit", "value": "25 ans" }
+      { "label": "Puissance", "value": "450 Wc" },
+      { "label": "Garantie", "value": "25 ans" }
     ]
   },
   {
@@ -43,17 +33,25 @@
     "type": "Onduleur",
     "category": "Onduleurs",
     "price": "6 900 000 GNF",
-    "priceEur": "≈ 800 EUR",
     "tagline": "Pilotez votre énergie en temps réel.",
     "imageUrl": "https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?q=80&w=600",
-    "description": "Onduleur hybride triphasé avec gestion intelligente de la batterie, priorisation des charges et application mobile. Compatible tous réseaux EGB.",
+    "description": "Onduleur hybride avec gestion intelligente. Compatible Wi-Fi.",
     "specs": [
-      { "label": "Puissance nominale", "value": "5 000 W" },
-      { "label": "MPPT", "value": "2 × 500 V" },
-      { "label": "Efficacité", "value": "97,6 %" },
-      { "label": "Batterie", "value": "48 V LiFePO4" },
-      { "label": "Communication", "value": "Wi-Fi / Bluetooth" },
+      { "label": "Puissance", "value": "5000 W" },
       { "label": "Garantie", "value": "10 ans" }
+    ]
+  },
+  {
+    "id": "onduleur-3kw",
+    "name": "Onduleur 3kW Off-Grid",
+    "type": "Onduleur",
+    "category": "Onduleurs",
+    "price": "4 500 000 GNF",
+    "tagline": "L'essentiel pour l'autonomie.",
+    "imageUrl": "https://images.unsplash.com/photo-1592833159155-c62df1b3562a?q=80&w=600",
+    "description": "Solution robuste pour sites isolés.",
+    "specs": [
+      { "label": "Puissance", "value": "3000 W" }
     ]
   },
   {
@@ -62,55 +60,77 @@
     "type": "Batterie",
     "category": "Batteries",
     "price": "19 500 000 GNF",
-    "priceEur": "≈ 2 250 EUR",
-    "tagline": "De l'énergie, même quand le soleil se couche.",
+    "tagline": "Énergie garantie toute la nuit.",
     "imageUrl": "https://images.unsplash.com/photo-1593941707882-a5bba14938c7?q=80&w=600",
-    "description": "Batterie au lithium fer phosphate (LiFePO4) haute densité, 6 000 cycles, borniers étanches. Idéale pour le stockage résidentiel et professionnel.",
+    "description": "Batterie au lithium LiFePO4 haute densité.",
     "specs": [
       { "label": "Capacité", "value": "10 kWh" },
-      { "label": "Chimie", "value": "LiFePO4" },
-      { "label": "Cycles de vie", "value": "6 000" },
-      { "label": "Tension", "value": "51,2 V" },
-      { "label": "Poids", "value": "98 kg" },
-      { "label": "Garantie", "value": "10 ans" }
+      { "label": "Technologie", "value": "Lithium" }
     ]
   },
   {
-    "id": "kit-premium",
-    "name": "Kit Maison Premium",
-    "type": "Kit",
-    "category": "Kits complets",
-    "price": "Sur devis",
-    "priceEur": "",
-    "tagline": "Une maison autonome, clé en main.",
-    "imageUrl": "https://images.unsplash.com/photo-1497440001374-f26997328c1b?q=80&w=600",
-    "description": "Kit complet 5 kW : 8 panneaux 550W, onduleur hybride 5kW, batterie 10 kWh, disjoncteurs et câbles. Pose et mise en service incluses à Conakry.",
+    "id": "batterie-gel-200ah",
+    "name": "Batterie GEL 200Ah",
+    "type": "Batterie",
+    "category": "Batteries",
+    "price": "2 800 000 GNF",
+    "tagline": "Fiabilité à prix réduit.",
+    "imageUrl": "https://images.unsplash.com/photo-1617576621334-44a569766981?q=80&w=600",
+    "description": "Batterie décharge lente pour petites installations.",
     "specs": [
-      { "label": "Production", "value": "6 800 kWh / an" },
-      { "label": "Panneaux", "value": "8 × 550 Wc" },
-      { "label": "Stockage", "value": "10 kWh" },
-      { "label": "Autonomie", "value": "Jusqu'à 2 jours" },
-      { "label": "Pose", "value": "Incluse (Conakry)" },
-      { "label": "Garantie globale", "value": "10 ans" }
+      { "label": "Capacité", "value": "200 Ah" }
     ]
   },
   {
-    "id": "pompe-solaire",
-    "name": "Pompe Solaire de Forage",
-    "type": "Solution",
-    "category": "Solaire agricole",
-    "price": "Sur devis",
-    "priceEur": "",
-    "tagline": "De l'eau où il y a du soleil.",
-    "imageUrl": "https://images.unsplash.com/photo-1581092921461-7d657d030960?q=80&w=600",
-    "description": "Système de pompage solaire submersible 2,2 kW capable de remonter 30 m³/jour. Conçu pour les villages éloignés du réseau EGB.",
+    "id": "serv-install",
+    "name": "Installation Professionnelle",
+    "type": "Service",
+    "category": "Services",
+    "price": "Sur Devis",
+    "tagline": "Pose certifiée par nos experts.",
+    "imageUrl": "https://images.unsplash.com/photo-1621905235277-248695029471?q=80&w=600",
+    "description": "Mise en service complète de votre système solaire.",
     "specs": [
-      { "label": "Débit", "value": "30 m³ / jour" },
-      { "label": "Hauteur manométrique", "value": "60 m" },
-      { "label": "Alimentation", "value": "Panneaux solaires" },
-      { "label": "Contrôleur", "value": "MPPT intégré" },
-      { "label": "Installation", "value": "Sur site" },
-      { "label": "Garantie", "value": "5 ans" }
+      { "label": "Zone", "value": "Toute la Guinée" }
+    ]
+  },
+  {
+    "id": "serv-audit",
+    "name": "Audit Énergétique",
+    "type": "Service",
+    "category": "Services",
+    "price": "Gratuit",
+    "tagline": "Optimisez vos factures.",
+    "imageUrl": "https://images.unsplash.com/photo-1454165833767-027ff33027b6?q=80&w=600",
+    "description": "Analyse de vos consommations pour une solution sur mesure.",
+    "specs": [
+      { "label": "Durée", "value": "1 heure" }
+    ]
+  },
+  {
+    "id": "acc-structure",
+    "name": "Structure de Montage Toit",
+    "type": "Accessoire",
+    "category": "Accessoires",
+    "price": "450 000 GNF",
+    "tagline": "Fixation robuste en aluminium.",
+    "imageUrl": "https://images.unsplash.com/photo-1548613053-22003006093d?q=80&w=600",
+    "description": "Rails et fixations pour 2 panneaux solaires.",
+    "specs": [
+      { "label": "Matériau", "value": "Aluminium" }
+    ]
+  },
+  {
+    "id": "acc-cable",
+    "name": "Câble Solaire 6mm² (50m)",
+    "type": "Accessoire",
+    "category": "Accessoires",
+    "price": "850 000 GNF",
+    "tagline": "Résistance UV et humidité.",
+    "imageUrl": "https://images.unsplash.com/photo-1615840287214-7ff58936c4cf?q=80&w=600",
+    "description": "Câble professionnel pour raccordement DC.",
+    "specs": [
+      { "label": "Section", "value": "6 mm²" }
     ]
   }
 ]

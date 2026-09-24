@@ -70,7 +70,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:gravity="center"
-        android:text="DKZ Solar App v1.0.0"
+        android:text="Solar Green App v1.0.0"
         android:textColor="@color/text_dim"
         android:textSize="12sp" />
 

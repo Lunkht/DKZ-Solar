@@ -54,7 +54,7 @@ export default function SolarScene({ variant = '550w', swatch = '#eef800', class
     return (
       <svg className={`solar-scene ${className}`} viewBox="0 0 240 300" fill="none">
         <rect x="60" y="40" width="120" height="200" rx="12" fill="rgba(255,255,255,0.03)" stroke={swatch} strokeWidth="4" />
-        <text x="120" y="82" textAnchor="middle" fill={swatch} fontSize="15" fontWeight="bold">DKZ S5</text>
+        <text x="120" y="82" textAnchor="middle" fill={swatch} fontSize="15" fontWeight="bold">Green S5</text>
         <rect x="86" y="104" width="68" height="30" rx="5" fill="#101010" stroke={swatch} strokeWidth="2" />
         <line x1="96" y1="119" x2="120" y2="119" stroke={swatch} strokeWidth="2" />
         <circle cx="133" cy="119" r="5" stroke={swatch} strokeWidth="2" />

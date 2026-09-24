@@ -1,55 +1,85 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_hero_gradient">
 
     <ImageView
         android:id="@+id/hero_image"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="centerCrop"
-        android:foreground="@drawable/bg_hero_overlay" />
+        android:src="@drawable/bg_product" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg_hero_overlay_v2" />
+
+    <TextView
+        android:id="@+id/hero_tag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="20dp"
+        android:text="RAPIDE • FIABLE • GARANTI"
+        android:textColor="@color/accent"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/hero_subtitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="80dp"
+        android:fontFamily="sans-serif-black"
+        android:lineSpacingExtra="2dp"
+        android:text="Passez au solaire aujourd'hui,\néconomisez demain."
+        android:textColor="@color/text_primary"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/hero_tag" />
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="bottom"
-        android:orientation="vertical"
-        android:padding="32dp">
-
-        <TextView
-            android:id="@+id/hero_title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="sans-serif-black"
-            android:letterSpacing="0.1"
-            android:textColor="@color/white"
-            android:textSize="14sp"
-            android:textAllCaps="true" />
-
-        <TextView
-            android:id="@+id/hero_subtitle"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:fontFamily="sans-serif-medium"
-            android:textColor="@color/white"
-            android:textSize="24sp"
-            android:lineSpacingExtra="2dp" />
+        android:layout_marginStart="24dp"
+        android:layout_marginBottom="20dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/hero_btn"
             android:layout_width="wrap_content"
-            android:layout_height="44dp"
-            android:layout_marginTop="16dp"
+            android:layout_height="32dp"
             android:background="@drawable/bg_button_primary"
-            android:paddingStart="20dp"
-            android:paddingEnd="20dp"
-            android:text="Voir le produit"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:text="Découvrir"
             android:textAllCaps="false"
             android:textColor="@color/black"
-            android:textSize="14sp"
+            android:textSize="11sp"
+            android:textStyle="bold" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/bg_button_outline"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:text="Simuler"
+            android:textAllCaps="false"
+            android:textColor="@color/accent"
+            android:textSize="11sp"
             android:textStyle="bold" />
     </LinearLayout>
-</FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

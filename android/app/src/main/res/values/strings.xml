@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">DKZ Solar</string>
+    <string name="app_name">Solar Green</string>
     <string name="nav_home">Accueil</string>
     <string name="nav_catalog">Catalogue</string>
     <string name="nav_quote">Devis</string>

@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback } from 'react'
 
-const KEY = 'dkz-theme'
+const KEY = 'solargreen-theme'
 
 function getInitialTheme() {
   const stored = typeof localStorage !== 'undefined' ? localStorage.getItem(KEY) : null

@@ -58,7 +58,7 @@ goto fail
 set CLASSPATH=%DIRNAME%\gradle\wrapper\gradle-wrapper.jar
 
 @rem Execute Gradle
-"%JAVA_EXE%" %DEFAULT_JVM_OPTS% %JAVA_OPTS% %GRADLE_OPTS% -Dorg.gradle.appname="DKZ Solar" -classpath "%CLASSPATH%" org.gradle.wrapper.GradleWrapperMain %*
+"%JAVA_EXE%" %DEFAULT_JVM_OPTS% %JAVA_OPTS% %GRADLE_OPTS% -Dorg.gradle.appname="SolarGreen" -classpath "%CLASSPATH%" org.gradle.wrapper.GradleWrapperMain %*
 
 if %ERRORLEVEL% EQU 0 goto mainEnd
 

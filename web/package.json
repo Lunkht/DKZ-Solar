@@ -1,9 +1,9 @@
 {
-  "name": "dkz-solar-web",
+  "name": "solargreen-web",
   "private": true,
   "version": "1.0.0",
   "type": "module",
-  "description": "DKZ Solar — Exportation et vente de panneaux solaires en Guinée",
+  "description": "Solar Green — Exportation et vente de panneaux solaires en Guinée",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

@@ -31,7 +31,7 @@ export default function Navbar() {
   return (
     <nav className={`nav ${scrolled || open ? 'scrolled' : ''}`}>
       <div className="container nav-inner">
-        <Link to="/" className="logo" aria-label="DKZ Solar — Accueil">
+        <Link to="/" className="logo" aria-label="Solar Green — Accueil">
           <Logo className="logo-badge" />
         </Link>
 

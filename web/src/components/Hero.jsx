@@ -14,7 +14,7 @@ export default function Hero() {
         </Reveal>
         <Reveal delay={2}>
           <p>
-            DKZ Solar exporte et installe des panneaux solaires haute performance, onduleurs
+            Solar Green exporte et installe des panneaux solaires haute performance, onduleurs
             et batteries pour les particuliers, entreprises et collectivités — de Conakry
             aux zones les plus reculées.
           </p>

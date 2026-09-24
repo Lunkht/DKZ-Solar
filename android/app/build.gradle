@@ -3,11 +3,11 @@ plugins {
 }
 
 android {
-    namespace 'com.dkzsolar.app'
+    namespace 'com.solargreen.app'
     compileSdk 34
 
     defaultConfig {
-        applicationId "com.dkzsolar.app"
+        applicationId "com.solargreen.app"
         minSdk 24
         targetSdk 34
         versionCode 1
@@ -38,4 +38,7 @@ dependencies {
     // Image Loading
     implementation 'com.github.bumptech.glide:glide:4.16.0'
     annotationProcessor 'com.github.bumptech.glide:compiler:4.16.0'
+
+    // JSON Handling
+    implementation 'com.google.code.gson:gson:2.10.1'
 }

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <style name="Theme.DkzSolar" parent="Theme.Material3.DayNight.NoActionBar">
+    <style name="Theme.SolarGreen" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Couleurs de base -->
         <item name="colorPrimary">@color/accent</item>
         <item name="colorOnPrimary">@color/black</item>
@@ -32,9 +32,16 @@
         <item name="android:fontFamily">sans-serif</item>
     </style>
 
-    <style name="SpinnerDkz" parent="Widget.AppCompat.Spinner">
+    <style name="SpinnerSolarGreen" parent="Widget.AppCompat.Spinner">
         <item name="android:background">@drawable/bg_input</item>
         <item name="android:textColor">@color/text_primary</item>
         <item name="android:textColorHint">@color/text_dim</item>
+    </style>
+
+    <style name="SolarGreenDialogTheme" parent="Theme.Material3.DayNight.Dialog.Alert">
+        <item name="android:colorBackground">@color/surface_custom</item>
+        <item name="colorSurface">@color/surface_custom</item>
+        <item name="colorOnSurface">@color/text_primary</item>
+        <item name="colorPrimary">@color/accent</item>
     </style>
 </resources>

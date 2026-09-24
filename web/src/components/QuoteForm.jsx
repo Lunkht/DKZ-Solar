@@ -19,11 +19,11 @@ export default function QuoteForm({ toast }) {
     e.preventDefault()
     setSending(true)
     try {
-      const res = await fetch('https://formsubmit.co/ajax/contact@dkzsolar.com', {
+      const res = await fetch('https://formsubmit.co/ajax/contact@solargreen.com', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
         body: JSON.stringify({
-          _subject: `Nouveau devis DKZ Solar — ${form.nom}`,
+          _subject: `Nouveau devis Solar Green — ${form.nom}`,
           ...form,
         }),
       })
@@ -62,7 +62,7 @@ export default function QuoteForm({ toast }) {
             <span className="ic">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none"><path d="M4 6l8 5 8-5M4 6h16v12H4V6z" stroke="currentColor" strokeWidth="1.6" strokeLinejoin="round"/></svg>
             </span>
-            <div><b>contact@dkzsolar.com</b><span>Réponse sous 24 h ouvrées</span></div>
+            <div><b>contact@solargreen.com</b><span>Réponse sous 24 h ouvrées</span></div>
           </div>
           <div className="contact-item">
             <span className="ic">

@@ -14,3 +14,7 @@ android/captures/
 # Divers
 .DS_Store
 Thumbs.db
+
+# Artifacts d'agents / planifications
+.artifacts/
+**/.artifacts/

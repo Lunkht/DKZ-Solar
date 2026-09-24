@@ -83,7 +83,7 @@
 
         <Spinner
             android:id="@+id/quote_product"
-            style="@style/SpinnerDkz"
+            style="@style/SpinnerSolarGreen"
             android:layout_width="match_parent"
             android:layout_height="56dp"
             android:layout_marginTop="12dp"

@@ -1,33 +1,38 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- Palette Dark - Thème Noir, Jaune & Vert -->
-    <color name="bg">#0A0A09</color> <!-- Noir -->
-    <color name="bg_soft">#13130E</color>
-    <color name="surface_custom">#17170F</color>
+    <!-- Palette Dark - Thème Solar Green (Vert & Fluo) -->
+    <color name="bg">#0A0A09</color> <!-- Noir profond -->
+    <color name="bg_soft">#121211</color>
+    <color name="surface_custom">#171716</color>
 
-    <color name="accent">#EEF800</color> <!-- Jaune acide -->
-    <color name="accent_dark">#80B918</color>
+    <color name="accent">#EEF800</color> <!-- Jaune Fluo / Electrique -->
+    <color name="accent_dark">#D4DD00</color>
     <color name="accent_alpha">#26EEF800</color>
 
-    <color name="secondary_orange">#80B918</color> <!-- Vert olive -->
-    <color name="secondary_orange_alpha">#2680B918</color>
+    <color name="secondary_green">#80B918</color> <!-- Vert forêt -->
+    <color name="secondary_green_alpha">#2680B918</color>
 
-    <color name="text_primary">#F5F5F0</color>
-    <color name="text_secondary">#A9C94C</color>
-    <color name="text_dim">#6E6F64</color>
+    <color name="text_primary">#FFFFFF</color>
+    <color name="text_secondary">#80B918</color>
+    <color name="text_dim">#70706F</color>
 
-    <color name="border_subtle">#1AEEF800</color>
+    <color name="border_subtle">#1AFFFFFF</color>
     <color name="stroke">#26FFFFFF</color>
 
     <!-- Gradients Hero/Product -->
-    <color name="hero_start">#202012</color>
+    <color name="hero_start">#151505</color>
     <color name="hero_center">#0A0A09</color>
     <color name="hero_end">#0A0A09</color>
 
-    <color name="product_bg_start">#1A1A11</color>
-    <color name="product_bg_center">#121210</color>
+    <color name="product_bg_start">#1A1A05</color>
+    <color name="product_bg_center">#12120A</color>
     <color name="product_bg_end">#0A0A09</color>
 
     <color name="black">#000000</color>
     <color name="white">#FFFFFF</color>
+
+    <!-- Logo -->
+    <color name="logo_bg">#0A0A09</color>
+    <color name="logo_letters">#FFFFFF</color>
+    <color name="logo_dot">#EEF800</color>
 </resources>

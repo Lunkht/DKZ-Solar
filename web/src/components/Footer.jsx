@@ -30,7 +30,7 @@ export default function Footer() {
             <h4>Contact</h4>
             <div className="footer-col">
               <a href="tel:+224621000000">+224 621 00 00 00</a>
-              <a href="mailto:contact@dkzsolar.com">contact@dkzsolar.com</a>
+              <a href="mailto:contact@solargreen.com">contact@solargreen.com</a>
               <span>B52 Route du Niger, Kaloum<br />Conakry — Guinée</span>
             </div>
           </div>
@@ -47,7 +47,7 @@ export default function Footer() {
         </div>
 
         <div className="footer-bottom">
-          <span>© {new Date().getFullYear()} DKZ Solar S.A. — Tous droits réservés.</span>
+          <span>© {new Date().getFullYear()} Solar Green S.A. — Tous droits réservés.</span>
           <span>Fait avec ⚡ en Guinée 🇬🇳</span>
         </div>
       </div>
