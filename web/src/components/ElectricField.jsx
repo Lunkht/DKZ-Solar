@@ -1,6 +1,8 @@
 import { useEffect, useRef } from 'react'
 
-const MAX_PARTICLES = 400
+const TRAIL_MS = 650
+const MAX_TRAIL = 240
+const MAX_FIBERS = 60
 
 function rand(a, b) {
   return a + Math.random() * (b - a)
@@ -10,12 +12,12 @@ function paletteFor(root) {
   const cs = getComputedStyle(root)
   const accent = cs.getPropertyValue('--accent').trim()
   const text = cs.getPropertyValue('--text').trim()
-  return [accent, accent, text, '#ffffff'].filter(Boolean)
+  return { accent: accent || '#eef800', text: text || '#80b918' }
 }
 
-function makeBolt(x, y, angle) {
-  const len = rand(18, 52)
-  const segs = 5 + ((Math.random() * 5) | 0)
+function makeFiber(x, y, angle) {
+  const len = rand(12, 38)
+  const segs = 3 + ((Math.random() * 3) | 0)
   const pts = []
   let px = x
   let py = y
@@ -23,7 +25,7 @@ function makeBolt(x, y, angle) {
     const t = (i + 1) / segs
     const bx = x + Math.cos(angle) * len * t
     const by = y + Math.sin(angle) * len * t
-    const spread = (1 - t) * len * 0.4
+    const spread = (1 - t) * len * 0.45
     px = bx + rand(-spread, spread)
     py = by + rand(-spread, spread)
     pts.push([px, py])
@@ -34,7 +36,8 @@ function makeBolt(x, y, angle) {
 export default function ElectricField({ className = '' }) {
   const hostRef = useRef(null)
   const canvasRef = useRef(null)
-  const parts = useRef([])
+  const trail = useRef([])
+  const fibers = useRef([])
   const last = useRef({ x: null, y: null, t: 0 })
 
   useEffect(() => {
@@ -60,65 +63,27 @@ export default function ElectricField({ className = '' }) {
     resize()
     window.addEventListener('resize', resize)
 
-    const spawn = (x, y, vx, vy) => {
-      const list = parts.current
-      const speed = Math.hypot(vx, vy)
-      const count = Math.max(1, Math.min(5, Math.round(speed / 30)))
-      for (let i = 0; i < count; i++) {
-        if (list.length >= MAX_PARTICLES) list.shift()
-        const angle = Math.atan2(vy, vx) + rand(-0.9, 0.9)
-        const v = rand(1.4, 4.6)
-        list.push({
-          kind: 'spark',
-          x,
-          y,
-          px: x - vx,
-          py: y - vy,
-          vx: Math.cos(angle) * v,
-          vy: Math.sin(angle) * v,
-          life: 1,
-          decay: rand(0.03, 0.07),
-          size: rand(0.7, 2.6),
-          color: palette[(Math.random() * palette.length) | 0],
-          glow: rand(5, 12),
-        })
-      }
-      if (speed > 26 && Math.random() < 0.25) {
-        if (list.length >= MAX_PARTICLES) list.shift()
-        list.push({
-          kind: 'bolt',
-          pts: makeBolt(x, y, Math.atan2(vy, vx)),
-          x,
-          y,
-          life: 1,
-          decay: 0.18,
-          width: rand(1.2, 2.2),
-          color: palette[(Math.random() * palette.length) | 0],
-          glow: 10,
-        })
-      }
-    }
-
     const onMove = (e) => {
       const r = canvas.getBoundingClientRect()
       const x = e.clientX - r.left
       const y = e.clientY - r.top
       const l = last.current
       const now = performance.now()
-      const dt = Math.min(now - l.t, 50)
-      if (l.x !== null && dt > 0) {
+      if (l.x !== null) {
         const dx = x - l.x
         const dy = y - l.y
         const dist = Math.hypot(dx, dy)
-        if (Math.abs(dx) + Math.abs(dy) >= 1) {
-          const steps = Math.max(1, Math.min(12, Math.round(dist / 7)))
-          for (let i = 0; i < steps; i++) {
-            spawn(
-              l.x + (dx * (i + 1)) / steps,
-              l.y + (dy * (i + 1)) / steps,
-              dx / steps,
-              dy / steps,
-            )
+        if (dist >= 2) {
+          const steps = Math.max(1, Math.min(14, Math.round(dist / 6)))
+          for (let i = 1; i <= steps; i++) {
+            trail.current.push({
+              x: l.x + (dx * i) / steps,
+              y: l.y + (dy * i) / steps,
+              born: now,
+            })
+          }
+          if (trail.current.length > MAX_TRAIL) {
+            trail.current.splice(0, trail.current.length - MAX_TRAIL)
           }
         }
       }
@@ -144,53 +109,91 @@ export default function ElectricField({ className = '' }) {
     host.addEventListener('mouseleave', onReset)
 
     const tick = () => {
+      const now = performance.now()
       ctx.clearRect(0, 0, w, h)
-      const list = parts.current
-      for (let i = list.length - 1; i >= 0; i--) {
-        const p = list[i]
-        p.life -= p.decay
-        if (p.life <= 0) {
-          list.splice(i, 1)
-          continue
-        }
-        ctx.globalAlpha = Math.min(1, p.life * 2.2)
+
+      const list = trail.current
+      while (list.length && now - list[0].born > TRAIL_MS) list.shift()
+      if (list.length && now - list[list.length - 1].born > TRAIL_MS) list.length = 0
+
+      if (list.length >= 2) {
+        const head = list[list.length - 1]
+        const flick = 0.75 + Math.sin(now / 70) * 0.25
+
+        // glow pass (aura)
         ctx.lineCap = 'round'
         ctx.lineJoin = 'round'
-        if (p.kind === 'spark') {
-          p.px = p.x
-          p.py = p.y
-          p.x += p.vx
-          p.y += p.vy
-          p.vx *= 0.96
-          p.vy *= 0.96
-          if (p.x < -20 || p.x > w + 20 || p.y < -20 || p.y > h + 20) {
-            list.splice(i, 1)
-            continue
-          }
-          ctx.strokeStyle = p.color
-          ctx.lineWidth = p.size
-          ctx.shadowColor = p.color
-          ctx.shadowBlur = p.glow
+        ctx.strokeStyle = palette.accent
+        ctx.globalAlpha = 0.22 * flick
+        ctx.lineWidth = 7
+        ctx.shadowColor = palette.accent
+        ctx.shadowBlur = 22
+        ctx.beginPath()
+        ctx.moveTo(list[0].x, list[0].y)
+        for (let i = 1; i < list.length; i++) ctx.lineTo(list[i].x, list[i].y)
+        ctx.stroke()
+
+        // core pass (filament), fading towards the tail
+        for (let i = 1; i < list.length; i++) {
+          const age = now - list[i].born
+          const f = 1 - age / TRAIL_MS
+          if (f <= 0.02) continue
+          const a = 0.85 * Math.pow(f, 1.4) * flick
+          ctx.strokeStyle = '#ffffff'
+          ctx.globalAlpha = a
+          ctx.lineWidth = Math.max(0.5, 2.6 * f)
+          ctx.shadowColor = palette.accent
+          ctx.shadowBlur = 8 * f * flick
           ctx.beginPath()
-          ctx.moveTo(p.px, p.py)
-          ctx.lineTo(p.x, p.y)
-          ctx.stroke()
-          ctx.fillStyle = '#ffffff'
-          ctx.shadowBlur = p.glow * 0.6
-          ctx.beginPath()
-          ctx.arc(p.x, p.y, Math.max(0.3, p.size * 0.35), 0, Math.PI * 2)
-          ctx.fill()
-        } else {
-          ctx.strokeStyle = p.color
-          ctx.lineWidth = p.width
-          ctx.shadowColor = p.color
-          ctx.shadowBlur = p.glow
-          ctx.beginPath()
-          ctx.moveTo(p.x, p.y)
-          for (const [px, py] of p.pts) ctx.lineTo(px, py)
+          ctx.moveTo(list[i - 1].x, list[i - 1].y)
+          ctx.lineTo(list[i].x, list[i].y)
           ctx.stroke()
         }
+
+        // head intensity
+        ctx.fillStyle = '#ffffff'
+        ctx.globalAlpha = Math.min(1, flick)
+        ctx.shadowColor = palette.accent
+        ctx.shadowBlur = 18
+        ctx.beginPath()
+        ctx.arc(head.x, head.y, 3.2 * flick, 0, Math.PI * 2)
+        ctx.fill()
+
+        // occasional branches flying off the thread
+        if (Math.random() < 0.3) {
+          const idx = Math.max(1, (Math.random() * (list.length - 1)) | 0)
+          const p = list[idx]
+          const f = fibers.current
+          if (f.length >= MAX_FIBERS) f.shift()
+          f.push({
+            pts: makeFiber(p.x, p.y, rand(-Math.PI, Math.PI)),
+            born: now,
+            angleGrad: rand(0.02, 0.06),
+          })
+        }
       }
+
+      // fibers
+      const fl = fibers.current
+      for (let i = fl.length - 1; i >= 0; i--) {
+        const g = fl[i]
+        const age = now - g.born
+        const t = age / 500
+        if (t >= 1) {
+          fl.splice(i, 1)
+          continue
+        }
+        ctx.globalAlpha = (1 - t) * 0.55
+        ctx.strokeStyle = palette.text
+        ctx.lineWidth = 1.4 * (1 - t)
+        ctx.shadowColor = palette.text
+        ctx.shadowBlur = 10 * (1 - t)
+        ctx.beginPath()
+        ctx.moveTo(g.pts[0][0], g.pts[0][1])
+        for (const [px, py] of g.pts) ctx.lineTo(px, py)
+        ctx.stroke()
+      }
+
       ctx.globalAlpha = 1
       ctx.shadowBlur = 0
       raf = requestAnimationFrame(tick)
@@ -203,7 +206,8 @@ export default function ElectricField({ className = '' }) {
       host.removeEventListener('mousemove', onMove)
       host.removeEventListener('mouseleave', onReset)
       themeObserver.disconnect()
-      parts.current = []
+      trail.current = []
+      fibers.current = []
     }
   }, [])
 
