@@ -6,9 +6,6 @@ export default function Hero() {
     <section className="hero" id="accueil">
       <ElectricField />
       <div className="hero-content">
-        <Reveal>
-          <span className="hero-eyebrow">Énergie solaire · Guinée</span>
-        </Reveal>
         <Reveal delay={1}>
           <h1>
             L’énergie du soleil, <span>au service de la Guinée.</span>
