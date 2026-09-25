@@ -179,6 +179,7 @@ section { position: relative; }
 .nav-links a:hover { color: var(--text); }
 .nav-links a:hover::after { transform: scaleX(1); }
 .nav-cta { padding: 8px 18px; font-size: 0.8rem; }
+.nav-cta, .mobile-menu .btn-primary { color: #ffffff; }
 
 /* ---------- Theme toggle ---------- */
 .theme-toggle {
